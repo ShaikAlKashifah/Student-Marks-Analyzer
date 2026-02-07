@@ -1,49 +1,54 @@
-# Student-Marks-Analyzer
-A Java Swing–based desktop application for managing and analyzing student marks, featuring record creation, search functionality, and real-time statistical analysis. Built using object-oriented principles with an interactive, event-driven GUI.
-
 # Student Marks Analyzer
 
 ## Overview
 
-The **Student Marks Analyzer** is a Java-based desktop application developed using **Java Swing** to efficiently manage and analyze student academic records. The application provides an interactive graphical user interface (GUI) that allows users to add student details, search records, and compute statistical insights such as average, highest, and lowest marks.
+The **Student Marks Analyzer** is a Java Swing–based desktop application designed to manage and analyze student academic records through a clean, interactive graphical user interface. The application allows users to enter student details (Name and USN), record subject-wise marks, generate detailed reports, and perform search and delete operations.
 
-This project demonstrates the practical application of **Object-Oriented Programming (OOP)** concepts, **event-driven programming**, and **Java Collections**, making it suitable for academic evaluation and portfolio presentation on GitHub.
+This project demonstrates strong understanding of **Object-Oriented Programming (OOP)**, **event-driven GUI development**, and **Java Collections**, making it suitable for academic evaluation as well as a portfolio project on GitHub.
 
 ---
 
 ## Objectives
 
-* To design a user-friendly desktop application for managing student records
-* To implement real-time analysis of student marks
-* To demonstrate Java Swing GUI development and event handling
-* To apply OOP principles in a real-world use case
+* To build a user-friendly Java desktop application for student marks management
+* To implement subject-wise marks entry and automated analysis
+* To demonstrate Java Swing layouts, event handling, and UI design
+* To apply OOP principles and collection-based data management
 
 ---
 
-## Features
+## Key Features
 
 ### Core Functionalities
 
-* Add student details including name, roll number, and marks
-* Display all stored student records
-* Search students by name or roll number
-* Calculate and display:
+* Add student details using **Name** and **USN**
+* Enter marks for multiple subjects:
 
+  * Cloud Computing
+  * Machine Learning
+  * Advanced Java
+  * Open Elective
+  * DevOps
+* Generate a complete student report with:
+
+  * Subject-wise marks
   * Average marks
-  * Highest marks
-  * Lowest marks
+  * Highest and lowest marks
+* Search student records by **USN**
+* Delete student records using **USN**
 
 ### User Interface Features
 
-* Interactive form-based GUI using Java Swing
-* Scrollable output area for better readability
-* Dialog-based error handling and validation messages
+* Modern, form-based GUI using **Java Swing**
+* Grid-based layout using `GridBagLayout` for better alignment
+* Scrollable output area for reports and results
+* Dialog-based user interaction for search and delete actions
 
 ### Validation & Reliability
 
-* Prevents empty input for name and roll number
-* Ensures marks are entered as valid integers
-* Graceful handling of invalid input using exception handling
+* Prevents empty input for Name and USN
+* Ensures all marks are valid integers
+* Graceful handling of invalid inputs using exception handling
 
 ---
 
@@ -53,7 +58,7 @@ This project demonstrates the practical application of **Object-Oriented Program
 | -------------------- | ---------------------------- |
 | Programming Language | Java                         |
 | GUI Framework        | Java Swing                   |
-| Data Structure       | ArrayList                    |
+| Data Structures      | ArrayList, LinkedHashMap     |
 | IDE                  | VS Code / IntelliJ / Eclipse |
 | Platform             | Windows / Linux              |
 
@@ -63,9 +68,9 @@ This project demonstrates the practical application of **Object-Oriented Program
 
 ### Application Structure
 
-* **Student Class**: Represents the student data model (name, roll number, marks)
-* **Main Frame**: Handles UI layout, event listeners, and application logic
-* **Collection Layer**: Uses `ArrayList` to store and manage student records dynamically
+* **Student Class**: Stores student name, USN, subject-wise marks, and computes statistics
+* **StudentManager Class**: Manages student records (add, search, delete, report generation)
+* **StudentAnalyzerUI Class**: Handles GUI layout, user interaction, and event handling
 
 ### Programming Paradigm
 
@@ -76,13 +81,13 @@ This project demonstrates the practical application of **Object-Oriented Program
 
 ## How the Application Works
 
-1. User enters student details in the input fields
-2. On clicking "Add Student", data is validated and stored in memory
-3. "Show All" displays all student records
-4. "Search" retrieves student details by name or roll number
-5. "Show Stats" computes average, maximum, and minimum marks
+1. User enters Name, USN, and subject-wise marks
+2. Clicking **Add Student** validates and stores data in memory
+3. **Show Report** displays all student details with computed statistics
+4. **Search by USN** retrieves a specific student's report
+5. **Delete by USN** removes a student record from the system
 
-All outputs are displayed dynamically within the GUI window.
+All results and reports are dynamically displayed in the output area of the GUI.
 
 ---
 
@@ -95,48 +100,35 @@ All outputs are displayed dynamically within the GUI window.
 
 ### Steps to Run
 
+```bash
 # Compile the program
-javac StudentMarksAnalyzer.java
+javac StudentAnalyzerUI.java
 
 # Run the application
-java StudentMarksAnalyzer
+java StudentAnalyzerUI
+```
 
-
-> Ensure that the file name matches the public class name: `StudentMarksAnalyzer.java`
+> Ensure that the file name matches the public class name: `StudentAnalyzerUI.java`
 
 ---
 
 ## Learning Outcomes
 
-* Hands-on experience with Java Swing GUI development
-* Understanding of event handling and user interaction
-* Practical implementation of OOP concepts such as classes, objects, and encapsulation
-* Use of Java Collections for dynamic data management
-* Writing clean, maintainable, and user-friendly desktop applications
+* Practical experience with Java Swing GUI development
+* Strong understanding of event handling and user interaction
+* Hands-on use of Java Collections (`ArrayList`, `LinkedHashMap`)
+* Implementation of OOP concepts such as encapsulation and modular design
+* Building maintainable and user-friendly desktop applications
 
 ---
 
 ## Limitations
 
 * Data is stored in memory and not persisted to a database
-* Single-user desktop application
+* Designed as a single-user desktop application
 * No file export or import functionality
 
----
 
-## Future Enhancements
-
-* Integrate database support (MySQL / SQLite)
-* Add grade calculation and report generation
-* Implement file export (PDF / CSV)
-* Enhance UI using JavaFX
-* Add authentication for role-based access
-
----
-
-## Project Type
-
-Academic Mini Project / Java GUI Application
 
 
 ⭐ If you find this project useful, feel free to explore and share feedback.
